@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SAFE vs Convertible Note</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reset.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/black.css">
+  <style>
+    :root {
+      --accent: #6ee7b7;
+      --accent2: #f9a8d4;
+      --bg: #0f172a;
+      --card: #1e293b;
+      --muted: #94a3b8;
+    }
+    .reveal { background: var(--bg); }
+    .reveal h1, .reveal h2, .reveal h3 { text-transform: none; letter-spacing: -0.02em; }
+    .reveal h1 { font-size: 2.4em; font-weight: 800; }
+    .reveal h2 { font-size: 1.7em; font-weight: 700; color: var(--accent); }
+    .reveal h3 { font-size: 1.2em; color: var(--muted); font-weight: 400; }
+    .reveal p, .reveal li { font-size: 0.95em; line-height: 1.7; }
+    .reveal ul { list-style: none; padding: 0; }
+    .reveal ul li::before { content: "→ "; color: var(--accent); font-weight: 700; }
+    .tag { display: inline-block; padding: 3px 12px; border-radius: 999px; font-size: 0.7em; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; }
+    .tag-safe { background: #064e3b; color: var(--accent); }
+    .tag-note { background: #4a0020; color: var(--accent2); }
+    .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; text-align: left; }
+    .card { background: var(--card); border-radius: 12px; padding: 24px 28px; }
+    .card h3 { margin: 0 0 12px; font-size: 1em; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; }
+    .card.safe h3 { color: var(--accent); }
+    .card.note h3 { color: var(--accent2); }
+    .card ul li::before { color: inherit; }
+    .card.safe ul li::before { color: var(--accent); }
+    .card.note ul li::before { color: var(--accent2); }
+    .highlight { color: var(--accent); font-weight: 700; }
+    .highlight2 { color: var(--accent2); font-weight: 700; }
+    .muted { color: var(--muted); font-size: 0.85em; }
+
+    /* Comparison table */
+    table { width: 100%; font-size: 0.8em; border-collapse: collapse; }
+    th { background: #1e293b; color: var(--muted); text-transform: uppercase; font-size: 0.75em; letter-spacing: 0.08em; padding: 10px 14px; }
+    td { padding: 10px 14px; border-bottom: 1px solid #1e293b; }
+    tr:hover td { background: #1e293b44; }
+    td:nth-child(2) { color: var(--accent); }
+    td:nth-child(3) { color: var(--accent2); }
+    th:nth-child(2) { color: var(--accent); }
+    th:nth-child(3) { color: var(--accent2); }
+    .check { color: #6ee7b7; }
+    .cross { color: #f87171; }
+    .pill { display: inline-block; padding: 2px 10px; border-radius: 999px; font-size: 0.8em; }
+    .pill-safe { background: #064e3b55; color: var(--accent); border: 1px solid #064e3b; }
+    .pill-note { background: #4a002055; color: var(--accent2); border: 1px solid #7c0033; }
+  </style>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+
+  <!-- TITLE -->
+  <section>
+    <h1>SAFE vs<br>Convertible Note</h1>
+    <h3>What every founder should know before signing</h3>
+  </section>
+
+  <!-- WHAT ARE THEY -->
+  <section>
+    <h2>What Are They?</h2>
+    <div class="cols">
+      <div class="card safe">
+        <h3>🟢 SAFE</h3>
+        <p>Simple Agreement for Future Equity</p>
+        <ul>
+          <li>Created by Y Combinator</li>
+          <li>Converts into equity at a future round</li>
+          <li class="highlight">Not a debt instrument</li>
+        </ul>
+      </div>
+      <div class="card note">
+        <h3>🔴 Convertible Note</h3>
+        <p>Short-term debt → future equity</p>
+        <ul>
+          <li>Traditional instrument</li>
+          <li>Converts into equity at a future round</li>
+          <li class="highlight2">Is a loan</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE BIG ONE: DEBT -->
+  <section>
+    <h2>The Most Important Difference</h2>
+    <h3>Debt vs. Not Debt</h3>
+    <div class="cols" style="margin-top: 24px;">
+      <div class="card safe">
+        <h3>SAFE</h3>
+        <ul>
+          <li>Not a loan</li>
+          <li>No repayment obligation</li>
+          <li>No maturity date</li>
+          <li>No interest</li>
+        </ul>
+      </div>
+      <div class="card note">
+        <h3>Convertible Note</h3>
+        <ul>
+          <li>Is a loan</li>
+          <li>Has principal</li>
+          <li>Accrues interest (4–8%)</li>
+          <li>Has a maturity date</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- MATURITY DATE -->
+  <section>
+    <h2>Maturity Date</h2>
+    <div class="cols">
+      <div class="card safe">
+        <h3>SAFE</h3>
+        <ul>
+          <li>No maturity date</li>
+          <li>Stays outstanding until a triggering event</li>
+          <li>Priced round, acquisition, etc.</li>
+        </ul>
+      </div>
+      <div class="card note">
+        <h3>Convertible Note</h3>
+        <ul>
+          <li>12–24 month deadline</li>
+          <li>If no round → investors can extend, convert, or...</li>
+          <li class="highlight2">demand repayment</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTEREST -->
+  <section>
+    <h2>Interest</h2>
+    <div class="cols">
+      <div class="card safe">
+        <h3>SAFE</h3>
+        <p style="font-size: 2em; margin: 20px 0;">0%</p>
+        <p class="muted">No interest. Ever.</p>
+      </div>
+      <div class="card note">
+        <h3>Convertible Note</h3>
+        <p style="font-size: 2em; margin: 20px 0; color: var(--accent2);">4–8%</p>
+        <p class="muted">Accrues over time, converts to equity along with principal.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPLEXITY -->
+  <section>
+    <h2>Complexity</h2>
+    <div class="cols">
+      <div class="card safe">
+        <h3>SAFE</h3>
+        <ul>
+          <li>Simpler document</li>
+          <li>Faster to close</li>
+          <li>Fewer negotiation points</li>
+          <li>Founder-friendly</li>
+        </ul>
+      </div>
+      <div class="card note">
+        <h3>Convertible Note</h3>
+        <ul>
+          <li>More complex</li>
+          <li>Negotiates: interest rate, maturity, cap, discount</li>
+          <li>Default provisions</li>
+          <li>More attorney time</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- INVESTOR PROTECTION -->
+  <section>
+    <h2>Investor Protection</h2>
+    <div class="cols">
+      <div class="card safe">
+        <h3>SAFE — Founder Wins</h3>
+        <ul>
+          <li>No repayment rights</li>
+          <li>No time pressure</li>
+          <li>Cleaner cap table</li>
+        </ul>
+      </div>
+      <div class="card note">
+        <h3>Note — Investor Wins</h3>
+        <ul>
+          <li>Legal debt claim</li>
+          <li>Maturity creates urgency</li>
+          <li>More leverage at conversion</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHEN TO USE -->
+  <section>
+    <h2>When to Use Each</h2>
+    <div class="cols">
+      <div class="card safe">
+        <h3>Use a SAFE when…</h3>
+        <ul>
+          <li>Pre-seed or seed stage</li>
+          <li>Small angel checks</li>
+          <li>You need to close fast</li>
+          <li>Founder-leaning ecosystem (e.g. Silicon Valley)</li>
+        </ul>
+      </div>
+      <div class="card note">
+        <h3>Use a Note when…</h3>
+        <ul>
+          <li>Investors want downside protection</li>
+          <li>Concern about timeline to next round</li>
+          <li>Larger angel checks</li>
+          <li>Investors insist</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPARISON TABLE -->
+  <section>
+    <h2>Quick Comparison</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Feature</th>
+          <th>SAFE</th>
+          <th>Convertible Note</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Is it debt?</td><td><span class="cross">✗</span> No</td><td><span class="check">✓</span> Yes</td></tr>
+        <tr><td>Maturity date</td><td>None</td><td>12–24 months</td></tr>
+        <tr><td>Interest</td><td>0%</td><td>4–8%</td></tr>
+        <tr><td>Repayment risk</td><td>None</td><td>Possible</td></tr>
+        <tr><td>Complexity</td><td>Low</td><td>Higher</td></tr>
+        <tr><td>Speed to close</td><td>Fast</td><td>Slower</td></tr>
+        <tr><td>Founder-friendly</td><td>⭐ More</td><td>Less</td></tr>
+        <tr><td>Investor protection</td><td>Less</td><td>More</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- TLDR -->
+  <section>
+    <h2>TL;DR</h2>
+    <div class="cols">
+      <div class="card safe">
+        <h3>SAFE</h3>
+        <p>Simple. Fast. No debt. Founder-friendly. The default for early-stage in today's market.</p>
+      </div>
+      <div class="card note">
+        <h3>Convertible Note</h3>
+        <p>More investor protection. More complexity. Use it when investors ask for it — or when you have real leverage and they don't.</p>
+      </div>
+    </div>
+    <p class="muted" style="margin-top: 24px;">When in doubt → use a SAFE.</p>
+  </section>
+
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+<script>
+  Reveal.initialize({
+    hash: true,
+    transition: 'fade',
+    transitionSpeed: 'fast',
+    controls: true,
+    progress: true,
+    center: true,
+  });
+</script>
+</body>
+</html>
