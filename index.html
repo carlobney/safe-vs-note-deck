@@ -16,19 +16,18 @@
       --muted: #94a3b8;
     }
     .reveal { background: var(--bg); }
+    .reveal .slides section { box-sizing: border-box; }
     .reveal h1, .reveal h2, .reveal h3 { text-transform: none; letter-spacing: -0.02em; }
-    .reveal h1 { font-size: 2.4em; font-weight: 800; }
-    .reveal h2 { font-size: 1.7em; font-weight: 700; color: var(--accent); }
-    .reveal h3 { font-size: 1.2em; color: var(--muted); font-weight: 400; }
-    .reveal p, .reveal li { font-size: 0.95em; line-height: 1.7; }
-    .reveal ul { list-style: none; padding: 0; }
+    .reveal h1 { font-size: 2.2em; font-weight: 800; }
+    .reveal h2 { font-size: 1.4em; font-weight: 700; color: var(--accent); margin-bottom: 0.4em; }
+    .reveal h3 { font-size: 1em; color: var(--muted); font-weight: 400; margin-bottom: 0.4em; }
+    .reveal p, .reveal li { font-size: 0.8em; line-height: 1.5; }
+    .reveal ul { list-style: none; padding: 0; margin: 0; }
+    .reveal ul li { margin-bottom: 4px; }
     .reveal ul li::before { content: "→ "; color: var(--accent); font-weight: 700; }
-    .tag { display: inline-block; padding: 3px 12px; border-radius: 999px; font-size: 0.7em; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; }
-    .tag-safe { background: #064e3b; color: var(--accent); }
-    .tag-note { background: #4a0020; color: var(--accent2); }
-    .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; text-align: left; }
-    .card { background: var(--card); border-radius: 12px; padding: 24px 28px; }
-    .card h3 { margin: 0 0 12px; font-size: 1em; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; }
+    .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; text-align: left; }
+    .card { background: var(--card); border-radius: 10px; padding: 16px 20px; }
+    .card h3 { margin: 0 0 8px; font-size: 0.8em; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); }
     .card.safe h3 { color: var(--accent); }
     .card.note h3 { color: var(--accent2); }
     .card ul li::before { color: inherit; }
@@ -36,12 +35,12 @@
     .card.note ul li::before { color: var(--accent2); }
     .highlight { color: var(--accent); font-weight: 700; }
     .highlight2 { color: var(--accent2); font-weight: 700; }
-    .muted { color: var(--muted); font-size: 0.85em; }
+    .muted { color: var(--muted); font-size: 0.8em; }
 
     /* Comparison table */
-    table { width: 100%; font-size: 0.8em; border-collapse: collapse; }
-    th { background: #1e293b; color: var(--muted); text-transform: uppercase; font-size: 0.75em; letter-spacing: 0.08em; padding: 10px 14px; }
-    td { padding: 10px 14px; border-bottom: 1px solid #1e293b; }
+    table { width: 100%; font-size: 0.72em; border-collapse: collapse; }
+    th { background: #1e293b; color: var(--muted); text-transform: uppercase; font-size: 0.72em; letter-spacing: 0.08em; padding: 7px 12px; }
+    td { padding: 7px 12px; border-bottom: 1px solid #1e293b; }
     tr:hover td { background: #1e293b44; }
     td:nth-child(2) { color: var(--accent); }
     td:nth-child(3) { color: var(--accent2); }
@@ -144,12 +143,12 @@
     <div class="cols">
       <div class="card safe">
         <h3>SAFE</h3>
-        <p style="font-size: 2em; margin: 20px 0;">0%</p>
+        <p style="font-size: 1.6em; margin: 12px 0;">0%</p>
         <p class="muted">No interest. Ever.</p>
       </div>
       <div class="card note">
         <h3>Convertible Note</h3>
-        <p style="font-size: 2em; margin: 20px 0; color: var(--accent2);">4–8%</p>
+        <p style="font-size: 1.6em; margin: 12px 0; color: var(--accent2);">4–8%</p>
         <p class="muted">Accrues over time, converts to equity along with principal.</p>
       </div>
     </div>
@@ -265,7 +264,7 @@
         <p>More investor protection. More complexity. Use it when investors ask for it — or when you have real leverage and they don't.</p>
       </div>
     </div>
-    <p class="muted" style="margin-top: 24px;">When in doubt → use a SAFE.</p>
+    <p class="muted" style="margin-top: 16px;">When in doubt → use a SAFE.</p>
   </section>
 
 </div>
@@ -279,6 +278,11 @@
     controls: true,
     progress: true,
     center: true,
+    width: 1280,
+    height: 720,
+    margin: 0.06,
+    minScale: 0.2,
+    maxScale: 2.0,
   });
 </script>
 </body>
